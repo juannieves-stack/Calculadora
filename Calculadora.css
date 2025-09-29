@@ -1,0 +1,111 @@
+/*esto accede a todos los estilos del documento*/
+* {
+  /*margen y padding en 0*/
+  /*esto quiere decir que no habra espacio entre los elementos*/
+  margin: 0;
+  padding: 0;
+  /*box-sizing hace que el padding y el border se incluyan en las dimensiones del elemento*/
+  box-sizing: border-box;
+  /*fuente por defecto que le damos a todo el documento*/
+  font-family: sans-serif;
+}
+
+body {
+  /*altura completa de la ventana*/
+  min-height: 100vh;
+  /*color de fondo*/
+  background-color: #000000;
+  /*usamos grid para centrar el contenido*/
+  display: grid;
+  /*centramos el contenido tanto horizontal como verticalmente*/
+  place-items: center;
+  /*le damos un poco de espacio al contenido*/
+}
+.Calculator {
+  /*color de fondo de la calculadora*/
+  background-color: #48bfff;
+  /*color del texto*/
+  color: white;
+  /*ancho de la calculadora*/
+  width: 350px;
+  /*maximo ancho de la calculadora*/
+  max-width: 100%;
+  /*espacio interno de la calculadora*/
+  padding: 1.5rem;
+  /*borde redondeado de la calculadora*/
+  border-radius: 1.5rem;
+  /*usamos grid para organizar los elementos dentro de la calculadora*/
+  /*el grid es una forma de organizar elementos en filas y columnas*/
+  display: grid;
+  /*4 columnas de igual tamaño*/
+  grid-template-columns: repeat(4, 1fr);
+  /*espacio entre los elementos*/
+  gap: 0.5rem;
+  /*sombra alrededor de la calculadora*/
+  /*0 0 20px es la posicion y el difuminado de la sombra*/
+  /*#48bfff es el color de la sombra*/
+  box-shadow: 0 0 20px #48bfff;
+}
+/*estilo de la pantalla de la calculadora*/
+.pantalla {
+  /*la pantalla ocupa las 4 columnas del grid*/
+  grid-column: 1/5;
+  /*color de fondo de la pantalla*/
+  background-color: #090c31;
+  /*color del texto de la pantalla*/
+  color: white;
+  /*tamaño de la fuente de la pantalla, rem es una unidad relativa al tamaño de la fuente raiz*/
+  font-size: 2rem;
+  /*negrita en el texto de la pantalla*/
+  font-weight: bold;
+  /*espacio interno de la pantalla*/
+  padding: 1.5rem;
+  /*borde redondeado de la pantalla*/
+  border-radius: 0.5rem;
+  /*alineacion del texto a la derecha*/
+  text-align: right;
+  /*para que el texto no se salga de la pantalla*/
+  overflow: hidden;
+  /*para que el texto no se salga de la pantalla*/
+  margin-bottom: 1.5rem;
+}
+.btn {
+  background-color: #006da7;
+  color: rgb(255, 255, 255);
+  border: 0;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #272e7b;
+}
+#c,
+#borrar,
+#dividir,
+#por,
+#resta,
+#mas {
+  background-color: #ff9100;
+}
+#c:hover,
+#borrar:hover,
+#dividir:hover,
+#por:hover,
+#resta:hover,
+#mas:hover {
+  background-color: #ea5c0a;
+}
+#cero {
+  grid-column: span 2;
+}
+#igual {
+  grid-row: span 2;
+  background-color: #c1132a;
+}
+#igual:hover {
+  background-color: #7a0a1a;
+}
